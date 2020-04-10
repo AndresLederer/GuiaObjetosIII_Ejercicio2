@@ -36,11 +36,20 @@ public class Estudiante extends Persona {
 		setCuotaMensual(cuotaMensual);
 	}
 	
+	private String checkCuotaMensual() {
+		String check;
+		if(cuotaMensual)
+			check = "Al dia";
+		else
+			check = "Moroso";
+		return check;
+	}
+	
 	//devuelve String con todos los datos del Estudiante
 	@Override
 	public String toString() {
 		String atributosEstudiante;
-		atributosEstudiante = super.toString()+String.format("INGRESO: %d\nCARRERA: %s\nCUOTA MENSUAL: %b",anioIngreso,carrera,cuotaMensual);
+		atributosEstudiante = super.toString()+String.format("INGRESO: %d\nCARRERA: %s\nCUOTA MENSUAL: %s",anioIngreso,carrera,checkCuotaMensual());
 		return atributosEstudiante;
 	}
 }
