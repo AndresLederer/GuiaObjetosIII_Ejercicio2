@@ -36,6 +36,7 @@ public class Estudiante extends Persona {
 		setCuotaMensual(cuotaMensual);
 	}
 	
+	//control de cuota mensual al dia
 	private String checkCuotaMensual() {
 		String check;
 		if(cuotaMensual)
